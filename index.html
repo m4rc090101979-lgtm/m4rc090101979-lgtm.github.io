@@ -292,6 +292,20 @@
     .sede-info p{margin:0;color:#dbeaff}
     .sede-info .btn{align-self:flex-start;margin-top:8px}
     @media (max-width:980px){.sede{grid-template-columns:1fr}.sede img{min-height:220px}}
+    .qrs{background:linear-gradient(135deg,#ffd21c 0%,#ffb300 100%)}
+    .qrs .section-kicker{color:#7a4b00}
+    .qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:900px;margin:auto}
+    .qr-item{background:#fff;border-radius:28px;padding:28px;text-align:center;box-shadow:0 20px 45px rgba(122,75,0,.25);transition:.25s}
+    .qr-item:hover{transform:translateY(-6px)}
+    .qr-item .qr-img{width:210px;height:210px;margin:6px auto 14px;padding:10px;border-radius:20px;border:3px solid #eef3f9}
+    .qr-item .qr-img svg{width:100%;height:100%;display:block}
+    .qr-item h3{margin:4px 0 4px;color:var(--blue-deep);font-size:1.35rem}
+    .qr-item p{margin:0 0 14px;color:var(--muted);font-size:.9rem;word-break:break-all}
+    .qr-item .btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .qr-item .btn{padding:11px 15px;font-size:.9rem}
+    .btn-blue{background:var(--blue);color:#fff}
+    .qr-badge{display:inline-block;background:#eaf4ff;color:var(--blue);font-weight:900;border-radius:999px;padding:6px 12px;font-size:.8rem}
+    @media (max-width:760px){.qr-grid{grid-template-columns:1fr}}
     .menu{gap:18px;font-size:.95rem}
   </style>
 </head>
@@ -559,6 +573,38 @@
       </div>
     </div>
 
+    <section class="qrs" id="qr">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Escanea y comparte</div>
+          <h2>Llévanos en tu celular</h2>
+          <p style="color:#5a3a00">Apunta la cámara de tu celular al código y accede al instante. También puedes descargarlos para imprimir o compartir.</p>
+        </div>
+        <div class="qr-grid">
+          <div class="qr-item reveal">
+            <span class="qr-badge">🌐 Página oficial</span>
+            <div class="qr-img" id="qrSitio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#000" d="M2 2.5h7m2 0h3m1 0h7m2 0h7m-29 1h1m5 0h1m2 0h1m2 0h4m1 0h2m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h2m4 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m1 0h4m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h12m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m2 0h4m-19 1h1m2 0h1m1 0h2m1 0h1m1 0h1m4 0h2m2 0h3m1 0h1m-24 1h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m3 0h3m3 0h2m1 0h1m2 0h1m-29 1h3m2 0h4m3 0h1m6 0h1m3 0h1m1 0h3m-28 1h1m3 0h1m2 0h3m4 0h1m1 0h1m4 0h1m4 0h2m-28 1h3m1 0h9m2 0h3m4 0h1m2 0h1m1 0h2m-29 1h2m1 0h1m1 0h1m1 0h1m2 0h2m4 0h1m2 0h1m-20 1h1m1 0h1m2 0h5m1 0h1m4 0h2m2 0h1m2 0h1m1 0h4m-26 1h1m1 0h1m4 0h1m1 0h3m2 0h3m3 0h1m1 0h1m1 0h1m-25 1h7m1 0h1m1 0h2m2 0h2m4 0h1m3 0h1m-26 1h1m1 0h1m4 0h4m3 0h2m2 0h1m1 0h2m1 0h1m2 0h1m-29 1h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m4 0h1m1 0h1m2 0h2m-26 1h2m3 0h3m1 0h2m1 0h1m1 0h1m3 0h2m4 0h2m-29 1h1m1 0h1m2 0h2m2 0h1m1 0h2m1 0h1m5 0h5m1 0h1m-19 1h2m3 0h1m2 0h2m2 0h1m3 0h1m1 0h3m-29 1h7m2 0h1m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1m-28 1h1m5 0h1m1 0h3m1 0h2m1 0h1m2 0h3m3 0h3m-27 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h4m2 0h5m2 0h2m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m6 0h2m1 0h4m-28 1h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h3m2 0h1m1 0h4m1 0h1m-29 1h1m5 0h1m4 0h1m1 0h1m1 0h4m1 0h2m5 0h1m-28 1h7m1 0h1m1 0h4m2 0h2m1 0h3m1 0h1m1 0h1m1 0h1"/></svg></div>
+            <h3>Cooperativa Marco Polo</h3>
+            <p>https://m4rc090101979-lgtm.github.io/</p>
+            <div class="btns">
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrSitio','Visita nuestra página oficial','QR_Pagina_Oficial_Marco_Polo.png')">⬇️ Descargar QR</button>
+              <button class="btn btn-outline" type="button" onclick="compartirURL('Cooperativa Marco Polo','https://m4rc090101979-lgtm.github.io/')">🔗 Compartir</button>
+            </div>
+          </div>
+          <div class="qr-item reveal">
+            <span class="qr-badge">💲 Consulta de pasajes</span>
+            <div class="qr-img" id="qrTarifas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="segno"><path class="qrline" stroke="#000" d="M2 2.5h7m1 0h1m1 0h3m1 0h1m3 0h1m1 0h1m3 0h1m1 0h7m-33 1h1m5 0h1m1 0h2m1 0h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h3m1 0h1m2 0h1m4 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h2m1 0h1m2 0h4m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h4m1 0h6m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h3m4 0h1m3 0h1m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h1m2 0h2m1 0h1m2 0h1m2 0h2m-23 1h1m4 0h7m1 0h4m2 0h1m2 0h1m1 0h1m5 0h2m-33 1h1m1 0h2m3 0h1m1 0h2m3 0h1m1 0h1m1 0h3m2 0h2m3 0h3m-31 1h1m2 0h4m5 0h1m1 0h2m2 0h1m1 0h3m3 0h1m1 0h1m1 0h2m-30 1h1m4 0h2m1 0h2m4 0h1m1 0h3m2 0h2m2 0h4m-31 1h2m1 0h2m1 0h1m1 0h3m6 0h3m3 0h2m1 0h2m4 0h1m-32 1h3m3 0h1m3 0h2m1 0h3m1 0h3m2 0h1m1 0h3m1 0h1m1 0h2m-33 1h1m1 0h2m1 0h3m4 0h2m3 0h1m2 0h2m3 0h3m1 0h3m-32 1h1m2 0h3m1 0h4m1 0h1m1 0h4m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m-33 1h2m4 0h6m2 0h1m5 0h1m2 0h3m1 0h2m3 0h1m-33 1h2m2 0h1m3 0h2m1 0h2m1 0h3m1 0h2m2 0h2m2 0h1m2 0h4m-33 1h4m1 0h2m1 0h4m3 0h1m3 0h1m1 0h4m1 0h2m1 0h2m1 0h1m-33 1h1m1 0h1m2 0h1m3 0h2m1 0h2m4 0h1m3 0h4m2 0h5m-32 1h1m2 0h1m1 0h1m2 0h1m1 0h6m2 0h1m2 0h1m1 0h2m2 0h2m1 0h1m-32 1h3m2 0h1m1 0h1m2 0h1m1 0h2m1 0h2m2 0h1m3 0h1m3 0h3m-30 1h1m2 0h1m1 0h3m1 0h1m2 0h2m2 0h3m2 0h1m2 0h3m4 0h1m-32 1h1m9 0h7m2 0h2m1 0h2m1 0h1m2 0h4m-32 1h2m1 0h10m1 0h1m3 0h2m2 0h1m1 0h6m-22 1h2m1 0h1m1 0h2m4 0h1m2 0h3m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h4m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m4 0h1m1 0h2m1 0h1m3 0h1m1 0h3m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h4m1 0h2m3 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m8 0h3m1 0h2m3 0h1m2 0h4m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m2 0h2m2 0h2m-33 1h1m5 0h1m1 0h3m1 0h5m1 0h1m8 0h4m-31 1h7m2 0h2m6 0h1m1 0h2m3 0h1m1 0h2m3 0h1"/></svg></div>
+            <h3>Consulta tu tarifa</h3>
+            <p>https://m4rc090101979-lgtm.github.io/tarifas/</p>
+            <div class="btns">
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrTarifas','Consulta el valor de tu pasaje','QR_Consulta_Pasajes_Marco_Polo.png')">⬇️ Descargar QR</button>
+              <button class="btn btn-outline" type="button" onclick="compartirURL('Tarifas Cooperativa Marco Polo','https://m4rc090101979-lgtm.github.io/tarifas/')">🔗 Compartir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="buzon" id="buzon">
       <div class="container">
         <div class="section-head reveal">
@@ -645,7 +691,7 @@
     <div class="container">
       <div class="footer-grid">
         <div><div class="footer-brand">COOPERATIVA MARCO POLO</div><p>Tu destino, nuestra misión. 47 años de experiencia conectando destinos.</p></div>
-        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#buzon">Buzón de sugerencias</a><br><a href="#contacto">Contacto</a></p></div>
+        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#qr">Códigos QR</a><br><a href="#buzon">Buzón de sugerencias</a><br><a href="#contacto">Contacto</a></p></div>
         <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Calle Antonio Tandazo, sector Cashapamba, lote 13<br>Sangolquí, Ecuador</p></div>
       </div>
       <div class="copyright"><span>© <span id="year"></span> Cooperativa Marco Polo. Todos los derechos reservados.</span><span>Viaja con nosotros.</span></div>
@@ -848,6 +894,28 @@
       bot('Mmm, no estoy seguro de haber entendido 🤔. Puedo ayudarte con esto:' + opts(MENU) + '<br><small>O escríbenos por <a href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a>.</small>');
     }
   })();
+  </script>
+  <script>
+    function descargarQR(id, titulo, archivo){
+      const svg = document.querySelector('#' + id + ' svg').outerHTML.replace('<svg', '<svg width="900" height="900"');
+      const img = new Image();
+      img.onload = () => {
+        const W = 1000, c = document.createElement('canvas'); c.width = W; c.height = W + 260;
+        const x = c.getContext('2d');
+        x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+        x.fillStyle = '#002b63'; x.fillRect(0, 0, W, 170);
+        x.fillStyle = '#ffd21c'; x.textAlign = 'center'; x.font = 'bold 58px Arial'; x.fillText('COOPERATIVA MARCO POLO', W/2, 80);
+        x.fillStyle = '#fff'; x.font = '38px Arial'; x.fillText(titulo, W/2, 138);
+        x.imageSmoothingEnabled = false; x.drawImage(img, 70, 200, W - 140, W - 140);
+        x.fillStyle = '#002b63'; x.font = 'bold 34px Arial'; x.fillText('Escanea con la cámara de tu celular', W/2, W + 200);
+        const a = document.createElement('a'); a.download = archivo; a.href = c.toDataURL('image/png'); a.click();
+      };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+    async function compartirURL(titulo, url){
+      try { if (navigator.share) { await navigator.share({ title: titulo, url }); return; } } catch (e) { return; }
+      try { await navigator.clipboard.writeText(url); alert('Enlace copiado: ' + url); } catch (e) { prompt('Copia este enlace:', url); }
+    }
   </script>
   <style>.services-grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}</style>
 </body>
