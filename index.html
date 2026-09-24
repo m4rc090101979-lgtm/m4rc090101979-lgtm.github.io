@@ -183,6 +183,109 @@
       .footer-grid{grid-template-columns:1fr}
       .copyright{display:block}
     }
+
+    /* ===== v5: secciones nuevas ===== */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+    .mv{background:linear-gradient(180deg,#fff 0%,#eef6ff 100%)}
+    .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .mv-card{position:relative;overflow:hidden;border-radius:30px;padding:38px 34px;color:#fff;box-shadow:var(--shadow);isolation:isolate}
+    .mv-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-80px;top:-90px;background:rgba(255,255,255,.14);z-index:-1}
+    .mv-card:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;left:-50px;bottom:-70px;background:rgba(255,210,28,.18);z-index:-1}
+    .mv-card.mision{background:linear-gradient(145deg,#003d82,#0079d8)}
+    .mv-card.vision{background:linear-gradient(145deg,#6a00b8,#df1670)}
+    .mv-icon{width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:32px;margin-bottom:18px;backdrop-filter:blur(6px)}
+    .mv-card h3{font-size:1.9rem;margin:0 0 12px;letter-spacing:-.03em}
+    .mv-card p{margin:0;font-size:1.06rem;color:#f1f7ff;line-height:1.65}
+    .mv-tag{display:inline-block;margin-top:18px;background:rgba(255,255,255,.18);padding:7px 12px;border-radius:999px;font-weight:850;font-size:.85rem}
+    .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+    .value{background:#fff;border:1px solid #dfe9f4;border-radius:20px;padding:18px 16px;text-align:center;font-weight:850;color:var(--blue-deep);transition:.25s}
+    .value:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:var(--shadow);border-color:transparent}
+    .value span{display:block;font-size:1.9rem;margin-bottom:6px}
+    .value small{display:block;color:var(--muted);font-weight:600;font-size:.8rem;margin-top:4px}
+
+    .team{background:linear-gradient(135deg,#001f48 0%,#003d82 60%,#0057b8 100%);color:#fff;position:relative;overflow:hidden}
+    .team:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 20%,rgba(255,210,28,.18),transparent 30%),radial-gradient(circle at 90% 80%,rgba(0,168,232,.25),transparent 35%)}
+    .team .container{position:relative}
+    .team h2{color:#fff}
+    .team .section-head p{color:#cfe3ff}
+    .team .section-kicker{color:var(--yellow)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px}
+    .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px;text-align:center;backdrop-filter:blur(8px)}
+    .stat strong{display:block;font-size:clamp(2.2rem,4vw,3rem);color:var(--yellow);line-height:1;font-weight:950}
+    .stat span{color:#dbeaff;font-weight:700;font-size:.9rem}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .team-card{background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:24px;transition:.25s;position:relative;overflow:hidden}
+    .team-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.3)}
+    .team-card .ti{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:14px;background:linear-gradient(145deg,#ffe98a,#ffd21c)}
+    .team-card h3{margin:0 0 6px;color:var(--blue-deep)}
+    .team-card p{margin:0;color:var(--muted);font-size:.93rem}
+    .team-quote{margin-top:30px;text-align:center;font-size:clamp(1.2rem,2.4vw,1.6rem);font-weight:850;color:#fff}
+    .team-quote span{color:var(--yellow)}
+
+    .buzon{background:#fff}
+    .buzon-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+    .buzon-info{border-radius:28px;padding:34px;background:linear-gradient(145deg,#18a957,#0d7a3e);color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .buzon-info:after{content:"💬";position:absolute;right:-10px;bottom:-30px;font-size:160px;opacity:.14}
+    .buzon-info h3{font-size:1.8rem;margin:0 0 10px}
+    .buzon-info p{color:#e6fff0}
+    .buzon-info ul{padding-left:18px;margin:14px 0 0;color:#e6fff0}
+    .buzon-form{background:var(--bg);border-radius:28px;padding:30px;display:grid;gap:12px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:2px solid #cfdae6;background:#fff;border-radius:999px;padding:9px 14px;font-weight:850;cursor:pointer;font:inherit;font-weight:800;color:var(--blue-deep)}
+    .chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+    .stars{display:flex;gap:4px;font-size:1.8rem;cursor:pointer;user-select:none}
+    .stars b{color:#cfdae6;transition:.15s}
+    .stars b.on{color:var(--yellow);text-shadow:0 2px 6px rgba(0,0,0,.12)}
+    .buzon-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn-green{background:#18a957;color:#fff}
+    .btn-outline{background:#fff;border-color:var(--blue);color:var(--blue)}
+    .check-line{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--muted);font-size:.92rem}
+    .check-line input{width:auto}
+
+    /* ===== PoloAmigo ===== */
+    .pa-fab{position:fixed;right:20px;bottom:20px;z-index:90;width:70px;height:70px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(145deg,#ffd21c,#ffb300);box-shadow:0 14px 30px rgba(0,43,99,.35);font-size:34px;display:grid;place-items:center;animation:pulse 2.4s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,210,28,.6),0 14px 30px rgba(0,43,99,.35)}70%{box-shadow:0 0 0 18px rgba(255,210,28,0),0 14px 30px rgba(0,43,99,.35)}100%{box-shadow:0 0 0 0 rgba(255,210,28,0),0 14px 30px rgba(0,43,99,.35)}}
+    .pa-hint{position:fixed;right:98px;bottom:36px;z-index:90;background:#fff;color:var(--blue-deep);padding:10px 14px;border-radius:14px 14px 4px 14px;box-shadow:var(--shadow);font-weight:850;font-size:.9rem;animation:float 3s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-5px)}}
+    .pa-win{position:fixed;right:20px;bottom:104px;z-index:95;width:min(390px,calc(100vw - 24px));height:min(600px,calc(100vh - 130px));background:#fff;border-radius:26px;box-shadow:0 30px 70px rgba(0,30,80,.35);display:none;flex-direction:column;overflow:hidden}
+    .pa-win.open{display:flex;animation:fade .25s ease}
+    .pa-head{background:linear-gradient(135deg,#002b63,#0079d8);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+    .pa-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(145deg,#ffd21c,#ffb300);display:grid;place-items:center;font-size:24px;flex-shrink:0}
+    .pa-head b{display:block;font-size:1.05rem}
+    .pa-head small{color:#bfe0ff}
+    .pa-head small:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#3ee07f;margin-right:6px}
+    .pa-x{margin-left:auto;background:rgba(255,255,255,.15);border:0;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+    .pa-msgs{flex:1;overflow-y:auto;padding:14px;background:#f4f8fc;display:flex;flex-direction:column;gap:10px}
+    .pa-m{max-width:88%;padding:10px 13px;border-radius:16px;font-size:.92rem;line-height:1.45;animation:fade .2s ease}
+    .pa-bot{align-self:flex-start;background:#fff;border:1px solid #e3ebf3;border-bottom-left-radius:4px}
+    .pa-user{align-self:flex-end;background:var(--blue);color:#fff;border-bottom-right-radius:4px}
+    .pa-bot a{color:var(--blue);font-weight:800}
+    .pa-opts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .pa-opts button{border:1px solid #cbd8e6;background:#fff;border-radius:999px;padding:6px 11px;font:inherit;font-size:.8rem;font-weight:750;color:var(--blue-deep);cursor:pointer}
+    .pa-opts button:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .pa-fare{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:8px 10px;margin-top:6px;font-size:.84rem}
+    .pa-fare i{display:block;font-style:normal;font-size:.7rem;color:#0369a1;font-weight:850;text-transform:uppercase}
+    .pa-in{display:flex;gap:8px;padding:10px;border-top:1px solid #e3ebf3}
+    .pa-in input{flex:1;border-radius:999px;padding:11px 14px}
+    .pa-in button{border:0;background:var(--blue);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:17px;flex-shrink:0}
+    .pa-typing span{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9fb3c8;margin:0 2px;animation:blink 1.2s infinite}
+    .pa-typing span:nth-child(2){animation-delay:.2s}.pa-typing span:nth-child(3){animation-delay:.4s}
+    @keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+
+    @media (max-width:980px){
+      .mv-grid,.buzon-box{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr 1fr}
+      .stats{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:620px){
+      .team-grid{grid-template-columns:1fr}
+      .pa-hint{display:none}
+      .pa-fab{width:62px;height:62px;right:14px;bottom:14px}
+      .pa-win{right:12px;bottom:88px}
+    }
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.pa-fab,.pa-hint{animation:none}}
+    .menu{gap:18px;font-size:.95rem}
   </style>
 </head>
 <body>
@@ -202,9 +305,11 @@
       <nav class="menu" id="menu">
         <a href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
-        <a href="#rutas">Rutas y horarios</a>
-        <a href="#servicios">Servicios</a>
+        <a href="#rutas">Rutas</a>
+        <a href="#mision">Misión</a>
+        <a href="#equipo">Equipo</a>
         <a href="https://m4rc090101979-lgtm.github.io/tarifas/" target="_blank" rel="noopener">Tarifas</a>
+        <a href="#buzon">Buzón</a>
         <a href="#contacto">Contacto</a>
         <a class="nav-cta" href="#contacto">Comprar boleto</a>
       </nav>
@@ -259,6 +364,63 @@
           </div>
           <a class="btn btn-primary" href="#contacto">Quiero información</a>
         </div>
+      </div>
+    </section>
+
+    <section class="mv" id="mision">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Nuestra identidad</div>
+          <h2>Misión y visión</h2>
+          <p>Lo que hacemos cada día y hacia dónde vamos como cooperativa.</p>
+        </div>
+        <div class="mv-grid">
+          <article class="mv-card mision reveal">
+            <div class="mv-icon">🎯</div>
+            <h3>Misión</h3>
+            <p>Brindar un servicio de transporte terrestre público de pasajeros seguro, puntual y de calidad en nuestras rutas Jatumpungo, Loreto, Sangolquí – Santa Rosa de Cusubamba y San Fernando, bajo los principios del cooperativismo, cumpliendo estrictamente la normativa vigente y generando bienestar económico y social para nuestros socios, conductores y las comunidades a las que servimos.</p>
+            <span class="mv-tag">🚌 Servicio seguro y puntual</span>
+          </article>
+          <article class="mv-card vision reveal">
+            <div class="mv-icon">🔭</div>
+            <h3>Visión 2030</h3>
+            <p>Ser, para el año 2030, una cooperativa de transporte modernizada, financieramente sostenible y reconocida en la provincia de Pichincha por la calidad y seguridad de su servicio, por la solidez de su gobernanza interna y por la gestión transparente y tecnológica de sus procesos.</p>
+            <span class="mv-tag">🚀 Modernos y transparentes</span>
+          </article>
+        </div>
+        <div class="values">
+          <div class="value reveal"><span>🛡️</span>Seguridad<small>Primero la vida</small></div>
+          <div class="value reveal"><span>⏱️</span>Puntualidad<small>Tu tiempo vale</small></div>
+          <div class="value reveal"><span>🤝</span>Respeto<small>Buen trato a todos</small></div>
+          <div class="value reveal"><span>🔍</span>Transparencia<small>Cuentas claras</small></div>
+          <div class="value reveal"><span>💚</span>Solidaridad<small>Espíritu cooperativo</small></div>
+          <div class="value reveal"><span>🌎</span>Compromiso<small>Con la comunidad</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="equipo">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Trabajo en equipo</div>
+          <h2>Juntos llegamos más lejos</h2>
+          <p>Detrás de cada viaje hay un equipo que trabaja coordinado: socios, conductores, ayudantes, despacho y directivos, todos con un mismo objetivo: que llegues bien a tu destino.</p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><strong data-count="47">0</strong><span>años de servicio</span></div>
+          <div class="stat reveal"><strong data-count="45">0</strong><span>unidades autorizadas</span></div>
+          <div class="stat reveal"><strong data-count="4">0</strong><span>rutas en operación</span></div>
+          <div class="stat reveal"><strong data-count="1979">0</strong><span>año de fundación</span></div>
+        </div>
+        <div class="team-grid">
+          <article class="team-card reveal"><div class="ti">🏛️</div><h3>Asamblea y Consejos</h3><p>La Asamblea General, el Consejo de Administración y el Consejo de Vigilancia toman las decisiones de forma democrática y transparente.</p></article>
+          <article class="team-card reveal"><div class="ti">📋</div><h3>Gerencia</h3><p>Planifica, organiza y controla la operación diaria, el cumplimiento normativo y la modernización de la cooperativa.</p></article>
+          <article class="team-card reveal"><div class="ti">🧑‍🤝‍🧑</div><h3>Socios</h3><p>Cada unidad pertenece a un socio comprometido con la calidad del servicio y el crecimiento de la cooperativa.</p></article>
+          <article class="team-card reveal"><div class="ti">🚍</div><h3>Conductores y ayudantes</h3><p>Personal capacitado en normativa ANT, conducción segura y buen trato al usuario.</p></article>
+          <article class="team-card reveal"><div class="ti">🕒</div><h3>Despacho</h3><p>Controla las salidas en secuencia, sin favoritismos, para garantizar frecuencias puntuales en cada ruta.</p></article>
+          <article class="team-card reveal"><div class="ti">💬</div><h3>Atención al usuario</h3><p>Escuchamos tus consultas, sugerencias y reclamos para mejorar cada día.</p></article>
+        </div>
+        <p class="team-quote reveal">“Un solo equipo, <span>una sola misión</span>: tu destino.”</p>
       </div>
     </section>
 
@@ -390,6 +552,49 @@
       </div>
     </div>
 
+    <section class="buzon" id="buzon">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Tu opinión nos importa</div>
+          <h2>Buzón de sugerencias</h2>
+          <p>Cuéntanos cómo fue tu viaje. Leemos cada mensaje para mejorar el servicio.</p>
+        </div>
+        <div class="buzon-box">
+          <div class="buzon-info reveal">
+            <h3>¿Qué puedes enviarnos?</h3>
+            <p>Tu mensaje llega directo a la administración de la cooperativa.</p>
+            <ul>
+              <li>Sugerencias para mejorar el servicio</li>
+              <li>Quejas o reclamos (indica unidad, ruta y hora)</li>
+              <li>Felicitaciones a conductores y ayudantes</li>
+              <li>Objetos perdidos</li>
+            </ul>
+            <p style="margin-top:16px"><b>Puedes hacerlo de forma anónima.</b></p>
+          </div>
+          <form class="buzon-form reveal" id="buzonForm">
+            <div class="chips" id="bzTipo">
+              <button type="button" class="chip on" data-v="Sugerencia">💡 Sugerencia</button>
+              <button type="button" class="chip" data-v="Queja o reclamo">⚠️ Queja</button>
+              <button type="button" class="chip" data-v="Felicitación">🌟 Felicitación</button>
+              <button type="button" class="chip" data-v="Objeto perdido">🎒 Objeto perdido</button>
+            </div>
+            <div>
+              <b style="color:var(--blue-deep)">¿Cómo calificas nuestro servicio?</b>
+              <div class="stars" id="bzStars"><b data-n="1">★</b><b data-n="2">★</b><b data-n="3">★</b><b data-n="4">★</b><b data-n="5">★</b></div>
+            </div>
+            <select id="bzRuta"><option value="">Ruta (opcional)</option><option>Ruta 1 · Jatumpungo ↔ Selva Alegre</option><option>Ruta 2 · Cashapamba ↔ Loreto</option><option>Ruta 3 · Sangolquí ↔ Cusubamba</option><option>Ruta 4 · San Fernando ↔ La Marín</option></select>
+            <input id="bzUnidad" placeholder="N.º de unidad, fecha y hora (opcional)">
+            <input id="bzNombre" placeholder="Tu nombre (opcional)">
+            <textarea id="bzMsg" required placeholder="Escribe aquí tu mensaje..."></textarea>
+            <label class="check-line"><input type="checkbox" id="bzAnon"> Enviar de forma anónima</label>
+            <div class="buzon-actions">
+              <button class="btn btn-green" type="submit">📲 Enviar por WhatsApp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contacto">
       <div class="container">
         <div class="section-head">
@@ -403,7 +608,7 @@
             <div class="contact-row"><span>📱</span><div><b>WhatsApp</b><a href="https://wa.me/593979212249" target="_blank" rel="noopener">+593 979 212 249</a></div></div>
             <div class="contact-row"><span>🚌</span><div><b>Rutas</b><span>Jatumpungo · Selva Alegre · Cashapamba · Loreto · Sangolquí · Cusubamba · San Fernando · La Marín</span></div></div>
             <div class="contact-row"><span>⏰</span><div><b>Horarios</b><span>Consulta la programación de cada ruta.</span></div></div>
-            <div class="contact-row"><span>📍</span><div><b>Atención</b><span>Cooperativa Marco Polo · Ecuador</span></div></div>
+            <div class="contact-row"><span>📍</span><div><b>Oficina</b><span>Sangolquí, Eloy Alfaro 273 y España · Ecuador</span></div></div>
           </div>
           <div class="contact-card">
             <h3>Solicita información</h3>
@@ -424,8 +629,8 @@
     <div class="container">
       <div class="footer-grid">
         <div><div class="footer-brand">COOPERATIVA MARCO POLO</div><p>Tu destino, nuestra misión. 47 años de experiencia conectando destinos.</p></div>
-        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#contacto">Contacto</a></p></div>
-        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Ecuador</p></div>
+        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#buzon">Buzón de sugerencias</a><br><a href="#contacto">Contacto</a></p></div>
+        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Sangolquí, Eloy Alfaro 273 y España<br>Ecuador</p></div>
       </div>
       <div class="copyright"><span>© <span id="year"></span> Cooperativa Marco Polo. Todos los derechos reservados.</span><span>Viaja con nosotros.</span></div>
     </div>
@@ -457,6 +662,175 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <!-- ===== PoloAmigo ===== -->
+  <div class="pa-hint" id="paHint">¡Hola! Soy PoloAmigo 👋</div>
+  <button class="pa-fab" id="paFab" aria-label="Abrir PoloAmigo">🚌</button>
+  <div class="pa-win" id="paWin" role="dialog" aria-label="PoloAmigo">
+    <div class="pa-head">
+      <div class="pa-av">🚌</div>
+      <div><b>PoloAmigo</b><small>En línea · Cooperativa Marco Polo</small></div>
+      <button class="pa-x" id="paX" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="pa-msgs" id="paMsgs"></div>
+    <form class="pa-in" id="paForm">
+      <input id="paInput" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button type="submit" aria-label="Enviar">➤</button>
+    </form>
+  </div>
+
+  <script>
+  (function(){
+    /* ---- Animaciones al hacer scroll ---- */
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ---- Contadores ---- */
+    const co = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return; co.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, t0 = performance.now(), d = 1400, from = end > 1000 ? 1900 : 0;
+      (function step(t){ const k = Math.min(1,(t - t0)/d); el.textContent = Math.round(from + (end - from)*(1 - Math.pow(1-k,3))); if (k < 1) requestAnimationFrame(step); })(t0);
+    }), {threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+    /* ---- Buzón de sugerencias ---- */
+    let tipo = 'Sugerencia', estrellas = 0;
+    document.querySelectorAll('#bzTipo .chip').forEach(c => c.addEventListener('click', () => {
+      document.querySelectorAll('#bzTipo .chip').forEach(x => x.classList.remove('on')); c.classList.add('on'); tipo = c.dataset.v;
+    }));
+    const stars = document.querySelectorAll('#bzStars b');
+    stars.forEach(s => s.addEventListener('click', () => { estrellas = +s.dataset.n; stars.forEach(x => x.classList.toggle('on', +x.dataset.n <= estrellas)); }));
+    document.getElementById('buzonForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const v = id => document.getElementById(id).value.trim();
+      const anon = document.getElementById('bzAnon').checked;
+      const lineas = [
+        '📮 BUZÓN DE SUGERENCIAS - Cooperativa Marco Polo', '',
+        'Tipo: ' + tipo,
+        'Calificación: ' + (estrellas ? '★'.repeat(estrellas) + '☆'.repeat(5 - estrellas) + ' (' + estrellas + '/5)' : 'Sin calificar'),
+        'Ruta: ' + (v('bzRuta') || 'No indicada'),
+        'Unidad/fecha/hora: ' + (v('bzUnidad') || 'No indicada'),
+        'Nombre: ' + (anon ? 'Anónimo' : (v('bzNombre') || 'No indicado')), '',
+        'Mensaje: ' + v('bzMsg')
+      ];
+      window.open('https://wa.me/593979212249?text=' + encodeURIComponent(lineas.join('\n')), '_blank');
+    });
+
+    /* ---- PoloAmigo ---- */
+    const WA = 'https://wa.me/593979212249';
+    const TARIFAS_URL = 'https://m4rc090101979-lgtm.github.io/tarifas/';
+    const fab = document.getElementById('paFab'), win = document.getElementById('paWin'), hint = document.getElementById('paHint');
+    const msgs = document.getElementById('paMsgs'), input = document.getElementById('paInput');
+    let iniciado = false, tarifas = null;
+
+    const norm = t => t.toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+    const esc = t => { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; };
+
+    function add(html, who){
+      const d = document.createElement('div'); d.className = 'pa-m ' + (who === 'u' ? 'pa-user' : 'pa-bot'); d.innerHTML = html;
+      msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+    }
+    function opts(list){ return '<div class="pa-opts">' + list.map(o => '<button type="button" data-q="' + o + '">' + o + '</button>').join('') + '</div>'; }
+    const MENU = ['🕒 Horarios','💲 Tarifas','🎓 Tarifa preferencial','🎯 Misión y visión','📮 Buzón','📞 Contacto'];
+
+    function bot(html){
+      const t = document.createElement('div'); t.className = 'pa-m pa-bot pa-typing'; t.innerHTML = '<span></span><span></span><span></span>';
+      msgs.appendChild(t); msgs.scrollTop = msgs.scrollHeight;
+      setTimeout(() => { t.remove(); add(html, 'b'); }, 450);
+    }
+
+    function abrir(){
+      win.classList.add('open'); hint.style.display = 'none';
+      if (!iniciado){ iniciado = true;
+        bot('¡Hola! 👋 Soy <b>PoloAmigo</b>, el asistente virtual de la Cooperativa Marco Polo. Puedo ayudarte con horarios, tarifas, rutas y más. ¿Qué necesitas?' + opts(MENU)); }
+      setTimeout(() => input.focus(), 300);
+    }
+    fab.addEventListener('click', () => win.classList.contains('open') ? win.classList.remove('open') : abrir());
+    hint.addEventListener('click', abrir);
+    document.getElementById('paX').addEventListener('click', () => win.classList.remove('open'));
+    msgs.addEventListener('click', e => { const b = e.target.closest('button[data-q]'); if (b) enviar(b.dataset.q); });
+    document.getElementById('paForm').addEventListener('submit', e => { e.preventDefault(); enviar(input.value); });
+
+    function rutasDesdePagina(){
+      return [...document.querySelectorAll('.route-panel')].map(p => ({
+        id: p.id,
+        nombre: p.querySelector('.route-num').textContent + ' · ' + p.querySelector('h3').textContent,
+        estaciones: [...p.querySelectorAll('.station')].map(s => ({ n: s.querySelector('h5').textContent, t: [...s.querySelectorAll('.time')].map(x => x.textContent) })),
+        nota: (p.querySelector('.warning') || {}).textContent || ''
+      }));
+    }
+    function htmlRuta(r){
+      return '<b>' + r.nombre + '</b><br>' + r.estaciones.map(s => '• <b>' + s.n + ':</b> ' + s.t.join(' · ')).join('<br>') + (r.nota ? '<br><small>' + r.nota + '</small>' : '');
+    }
+
+    async function cargarTarifas(){
+      if (tarifas) return tarifas;
+      const txt = await fetch(TARIFAS_URL, {cache:'no-store'}).then(r => r.text());
+      const m = txt.match(/const tarifas\s*=\s*(\[[\s\S]*?\n\]);/);
+      tarifas = new Function('return ' + m[1])();
+      return tarifas;
+    }
+    function puntaje(t, palabras){
+      const od = norm(t.origen + ' ' + t.destino), ru = norm(t.ruta);
+      return palabras.reduce((a, p) => a + (od.includes(p) ? 2 : ru.includes(p) ? 1 : 0), 0);
+    }
+    async function responderTarifa(q){
+      try {
+        const lista = await cargarTarifas();
+        const stop = ['tarifa','tarifas','precio','pasaje','cuanto','cuesta','vale','valor','de','del','a','al','la','el','hasta','desde','para','por','favor','me','quiero','saber','cobran','es','que','en'];
+        const palabras = norm(q).split(' ').filter(w => w.length > 2 && !stop.includes(w));
+        if (!palabras.length) return bot('Dime tu <b>origen y destino</b>, por ejemplo: <i>"Loreto a La Marín"</i> o <i>"Sangolquí a Pifo"</i>. 🚌' + opts(['Loreto a La Marín','Sangolquí a San Rafael','Pifo a Ascázubi']));
+        const res = lista.map(t => ({t, p: puntaje(t, palabras)})).filter(x => x.p > 0).sort((a,b) => b.p - a.p);
+        if (!res.length) return bot('No encontré ese tramo 🤔. Prueba con otros nombres de paradas o usa el <a href="' + TARIFAS_URL + '" target="_blank" rel="noopener">asistente completo de tarifas</a>.');
+        const max = res[0].p, top = res.filter(x => x.p === max).slice(0, 3);
+        bot('Esto encontré 👇' + top.map(x => '<div class="pa-fare"><i>' + x.t.ruta + '</i><b>' + x.t.origen + ' ➔ ' + x.t.destino + '</b><br>Normal: <b>$' + x.t.normal.toFixed(2) + '</b> · Preferencial: <b>$' + x.t.preferencial.toFixed(2) + '</b></div>').join('') +
+          '<br><small>Según Resolución 020-DIR-2026-ANT. <a href="' + TARIFAS_URL + '" target="_blank" rel="noopener">Ver todas las tarifas</a></small>');
+      } catch (e) {
+        bot('Consulta todas las tarifas aquí: <a href="' + TARIFAS_URL + '" target="_blank" rel="noopener">Asistente de tarifas</a> 💲');
+      }
+    }
+
+    function enviar(texto){
+      texto = (texto || '').trim(); if (!texto) return;
+      add(esc(texto), 'u'); input.value = '';
+      const ALIAS = {'🕒 Horarios':'horarios','💲 Tarifas':'tarifa','🎓 Tarifa preferencial':'preferencial','🎯 Misión y visión':'mision','📮 Buzón':'buzon','📞 Contacto':'contacto'};
+      const q = norm(ALIAS[texto] || texto);
+      const tiene = (...k) => k.some(x => q.includes(x));
+      const rutas = rutasDesdePagina();
+
+      if (tiene('hola','buenas','buenos','saludos','hey') && q.split(' ').length <= 3)
+        return bot('¡Hola! 😊 ¿En qué te ayudo hoy?' + opts(MENU));
+      if (tiene('gracias','chevere','excelente','genial'))
+        return bot('¡Con gusto! 💛 Gracias por viajar con Marco Polo. ¿Algo más?' + opts(MENU));
+      if (tiene('preferencial','descuento','estudiante','tercera edad','adulto mayor','discapacidad','medio pasaje','50'))
+        return bot('🎓 <b>Tarifa preferencial (50% de descuento)</b> para:<br>• Estudiantes<br>• Adultos mayores<br>• Personas con discapacidad<br><small>Presenta tu cédula o carné al abordar.</small>');
+      if (tiene('tarifa','precio','pasaje','cuanto','cuesta','valor','vale','cobran'))
+        return responderTarifa(texto);
+      if (/\s(a|hasta|hacia)\s/.test(' ' + q + ' ') && !tiene('horario','hora','salida','sale','turno'))
+        return responderTarifa(texto);
+      for (const r of rutas){
+        const claves = norm(r.nombre).split(' ').filter(w => w.length > 3 && !['ruta','marin'].includes(w));
+        if ((tiene('horario','hora','salida','sale','ruta','turno') || tiene(...claves)) && tiene(...claves)) return bot('🕒 ' + htmlRuta(r));
+      }
+      if (tiene('horario','hora','salida','sale','turno','ruta','rutas'))
+        return bot('🕒 ¿De qué ruta quieres ver los horarios?' + opts(rutas.map(r => r.nombre)));
+      if (tiene('mision','vision','valores','quienes son','cooperativa','historia'))
+        return bot('🎯 <b>Misión:</b> ' + document.querySelector('.mv-card.mision p').textContent + '<br><br>🔭 <b>Visión 2030:</b> ' + document.querySelector('.mv-card.vision p').textContent);
+      if (tiene('sugerencia','queja','reclamo','felicit','buzon','perdido','perdi','olvide','denuncia'))
+        { setTimeout(() => document.getElementById('buzon').scrollIntoView({behavior:'smooth'}), 700);
+          return bot('📮 Te llevo al <b>Buzón de sugerencias</b>. Ahí puedes enviar sugerencias, quejas, felicitaciones u objetos perdidos, incluso de forma anónima.'); }
+      if (tiene('boleto','comprar','reserv','encomienda'))
+        return bot('🎫 Puedes solicitar tu boleto directamente por WhatsApp: <a href="' + WA + '?text=' + encodeURIComponent('Hola Marco Polo, quiero comprar un boleto.') + '" target="_blank" rel="noopener">Abrir WhatsApp</a>');
+      if (tiene('contacto','telefono','whatsapp','llamar','direccion','oficina','ubicacion','donde'))
+        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 979 212 249</a><br>📍 <b>Oficina:</b> Sangolquí, Eloy Alfaro 273 y España');
+      if (tiene('wifi','internet'))
+        return bot('📶 Nuestras unidades cuentan con Wi‑Fi a bordo para que viajes conectado.');
+      if (tiene('equipo','socio','conductor','chofer','directiv','gerente','presidente'))
+        { setTimeout(() => document.getElementById('equipo').scrollIntoView({behavior:'smooth'}), 700);
+          return bot('🤝 Somos un equipo de socios, conductores, ayudantes, despacho y directivos trabajando por tu viaje. Te muestro la sección <b>Trabajo en equipo</b>.'); }
+      bot('Mmm, no estoy seguro de haber entendido 🤔. Puedo ayudarte con esto:' + opts(MENU) + '<br><small>O escríbenos por <a href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a>.</small>');
+    }
+  })();
   </script>
   <style>.services-grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}</style>
 </body>
