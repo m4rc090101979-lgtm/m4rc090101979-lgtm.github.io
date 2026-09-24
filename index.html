@@ -285,6 +285,13 @@
       .pa-win{right:12px;bottom:88px}
     }
     @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.pa-fab,.pa-hint{animation:none}}
+    .sede{display:grid;grid-template-columns:1.2fr .8fr;gap:0;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:28px;background:#001f48;color:#fff}
+    .sede img{width:100%;height:100%;object-fit:cover;min-height:280px}
+    .sede-info{padding:34px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:linear-gradient(145deg,#002b63,#0057b8)}
+    .sede-info h3{margin:0;font-size:1.8rem}
+    .sede-info p{margin:0;color:#dbeaff}
+    .sede-info .btn{align-self:flex-start;margin-top:8px}
+    @media (max-width:980px){.sede{grid-template-columns:1fr}.sede img{min-height:220px}}
     .menu{gap:18px;font-size:.95rem}
   </style>
 </head>
@@ -602,13 +609,22 @@
           <h2>Contáctanos</h2>
           <p>Déjanos tu consulta y te ayudaremos con rutas, horarios y boletos.</p>
         </div>
+        <div class="sede reveal">
+          <img src="sede-marco-polo.webp" alt="Sede de la Cooperativa Marco Polo en Cashapamba" loading="lazy">
+          <div class="sede-info">
+            <div class="section-kicker" style="color:var(--yellow)">Nuestra sede</div>
+            <h3>Te esperamos en nuestras oficinas</h3>
+            <p>📍 Calle Antonio Tandazo, sector Cashapamba, lote 13<br>Sangolquí, Pichincha · Ecuador</p>
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Cooperativa+Marco+Polo+Antonio+Tandazo+Cashapamba+Sangolqu%C3%AD" target="_blank" rel="noopener">🗺️ Cómo llegar</a>
+          </div>
+        </div>
         <div class="contact-grid">
           <div class="contact-card">
             <h3>Información de contacto</h3>
             <div class="contact-row"><span>📱</span><div><b>WhatsApp</b><a href="https://wa.me/593979212249" target="_blank" rel="noopener">+593 979 212 249</a></div></div>
             <div class="contact-row"><span>🚌</span><div><b>Rutas</b><span>Jatumpungo · Selva Alegre · Cashapamba · Loreto · Sangolquí · Cusubamba · San Fernando · La Marín</span></div></div>
             <div class="contact-row"><span>⏰</span><div><b>Horarios</b><span>Consulta la programación de cada ruta.</span></div></div>
-            <div class="contact-row"><span>📍</span><div><b>Oficina</b><span>Sangolquí, Eloy Alfaro 273 y España · Ecuador</span></div></div>
+            <div class="contact-row"><span>📍</span><div><b>Oficina</b><span>Calle Antonio Tandazo, sector Cashapamba, lote 13 · Sangolquí, Ecuador</span></div></div>
           </div>
           <div class="contact-card">
             <h3>Solicita información</h3>
@@ -630,7 +646,7 @@
       <div class="footer-grid">
         <div><div class="footer-brand">COOPERATIVA MARCO POLO</div><p>Tu destino, nuestra misión. 47 años de experiencia conectando destinos.</p></div>
         <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#buzon">Buzón de sugerencias</a><br><a href="#contacto">Contacto</a></p></div>
-        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Sangolquí, Eloy Alfaro 273 y España<br>Ecuador</p></div>
+        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Calle Antonio Tandazo, sector Cashapamba, lote 13<br>Sangolquí, Ecuador</p></div>
       </div>
       <div class="copyright"><span>© <span id="year"></span> Cooperativa Marco Polo. Todos los derechos reservados.</span><span>Viaja con nosotros.</span></div>
     </div>
@@ -718,6 +734,7 @@
 
     /* ---- PoloAmigo ---- */
     const WA = 'https://wa.me/593979212249';
+    const MAPS = 'https://www.google.com/maps/search/?api=1&query=Cooperativa+Marco+Polo+Antonio+Tandazo+Cashapamba+Sangolqu%C3%AD';
     const TARIFAS_URL = 'https://m4rc090101979-lgtm.github.io/tarifas/';
     const fab = document.getElementById('paFab'), win = document.getElementById('paWin'), hint = document.getElementById('paHint');
     const msgs = document.getElementById('paMsgs'), input = document.getElementById('paInput');
@@ -821,8 +838,8 @@
           return bot('📮 Te llevo al <b>Buzón de sugerencias</b>. Ahí puedes enviar sugerencias, quejas, felicitaciones u objetos perdidos, incluso de forma anónima.'); }
       if (tiene('boleto','comprar','reserv','encomienda'))
         return bot('🎫 Puedes solicitar tu boleto directamente por WhatsApp: <a href="' + WA + '?text=' + encodeURIComponent('Hola Marco Polo, quiero comprar un boleto.') + '" target="_blank" rel="noopener">Abrir WhatsApp</a>');
-      if (tiene('contacto','telefono','whatsapp','llamar','direccion','oficina','ubicacion','donde'))
-        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 979 212 249</a><br>📍 <b>Oficina:</b> Sangolquí, Eloy Alfaro 273 y España');
+      if (tiene('contacto','telefono','whatsapp','llamar','direccion','oficina','ubicacion','donde','sede','llegar','mapa'))
+        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 979 212 249</a><br>📍 <b>Oficina:</b> Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí.<br><a href="'+MAPS+'" target="_blank" rel="noopener">🗺️ Cómo llegar</a>');
       if (tiene('wifi','internet'))
         return bot('📶 Nuestras unidades cuentan con Wi‑Fi a bordo para que viajes conectado.');
       if (tiene('equipo','socio','conductor','chofer','directiv','gerente','presidente'))
